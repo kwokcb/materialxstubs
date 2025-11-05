@@ -35,6 +35,7 @@ pip install --no-build-isolation .
 pip install .
 # Reload VS Code: Ctrl+Shift+P → "Developer: Reload Window"
 ```
+<img src="documents/test_hover.png" width=100%>
 
 **Requirements:** Python and Pylance extension
 

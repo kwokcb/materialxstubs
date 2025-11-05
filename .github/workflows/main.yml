@@ -1,0 +1,82 @@
+name: Build MaterialX Stubs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.10', '3.11', '3.12']
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build
+    
+    - name: Build package
+      run: |
+        python -m build
+    
+    - name: List build outputs
+      run: |
+        echo "=== Build directory contents ==="
+        ls -la dist/
+      shell: bash
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: materialxstubs-${{ matrix.os }}-py${{ matrix.python-version }}
+        path: dist/*
+        retention-days: 30
+    
+    - name: Display package info
+      run: |
+        echo "=== Package contents ==="
+        pip install pkginfo
+        python -c "import pkginfo; import glob; [print(f'\n{pkg}:\n', pkginfo.get_metadata(pkg)) for pkg in glob.glob('dist/*.whl') + glob.glob('dist/*.tar.gz')]"
+      shell: bash
+
+  test-install:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: materialxstubs-ubuntu-latest-py3.11
+        path: dist/
+    
+    - name: Install package
+      run: |
+        pip install dist/*.whl
+    
+    - name: Verify installation
+      run: |
+        python -c "import MaterialX; print('MaterialX stubs installed successfully')"
+        pip show materialxstubs

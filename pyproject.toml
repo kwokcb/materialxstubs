@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+  "setuptools>=61",
+  "wheel",
+  "mypy>=1.0",
+  "MaterialX"
+]
+build-backend = "build_backend"
+backend-path = ["."]
+
+[project]
+name = "materialxstubs"
+version = "0.0.1"
+description = "PEP 561 type stubs for MaterialX"
+readme = "README.md"
+maintainers = [
+  { name = "Bernard Kwok", email = "kwokcb@gmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+  "MaterialX",
+  "pybind11-stubgen"
+]
+keywords = ["typing", "stubs", "PEP561", "MaterialX", "types"]
+classifiers = [
+  "Programming Language :: Python",
+  "Typing :: Stubs Only",
+  "Topic :: Software Development :: Libraries",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["MaterialX*"]
+
+[tool.setuptools.package-data]
+MaterialX = ["**/*.pyi"]

@@ -1,0 +1,65 @@
+import MaterialX.PyMaterialXCore
+import MaterialX.PyMaterialXGenShader
+
+class EsslShaderGenerator(GlslShaderGenerator):
+    def __init__(self, *args, **kwargs) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    @staticmethod
+    def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
+        """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
+    def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
+        """generate(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
+    def getTarget(self) -> str:
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator) -> str"""
+    def getVersion(self) -> str:
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator) -> str"""
+
+class GlslResourceBindingContext(MaterialX.PyMaterialXGenShader.HwResourceBindingContext):
+    def __init__(self, arg0: int, arg1: int) -> None:
+        """__init__(self: MaterialX.PyMaterialXGenGlsl.GlslResourceBindingContext, arg0: int, arg1: int) -> None"""
+    @staticmethod
+    def create(arg0: int, arg1: int) -> GlslResourceBindingContext:
+        """create(arg0: int, arg1: int) -> MaterialX.PyMaterialXGenGlsl.GlslResourceBindingContext"""
+    def emitDirectives(self, arg0: MaterialX.PyMaterialXGenShader.GenContext, arg1: MaterialX.PyMaterialXGenShader.ShaderStage) -> None:
+        """emitDirectives(self: MaterialX.PyMaterialXGenGlsl.GlslResourceBindingContext, arg0: MaterialX.PyMaterialXGenShader.GenContext, arg1: MaterialX.PyMaterialXGenShader.ShaderStage) -> None"""
+    def emitResourceBindings(self, arg0: MaterialX.PyMaterialXGenShader.GenContext, arg1: MaterialX.PyMaterialXGenShader.VariableBlock, arg2: MaterialX.PyMaterialXGenShader.ShaderStage) -> None:
+        """emitResourceBindings(self: MaterialX.PyMaterialXGenGlsl.GlslResourceBindingContext, arg0: MaterialX.PyMaterialXGenShader.GenContext, arg1: MaterialX.PyMaterialXGenShader.VariableBlock, arg2: MaterialX.PyMaterialXGenShader.ShaderStage) -> None"""
+
+class GlslShaderGenerator(MaterialX.PyMaterialXGenShader.HwShaderGenerator):
+    def __init__(self, *args, **kwargs) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    @staticmethod
+    def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
+        """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
+    def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
+        """generate(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
+    def getTarget(self) -> str:
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator) -> str"""
+    def getVersion(self) -> str:
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator) -> str"""
+
+class VkShaderGenerator(GlslShaderGenerator):
+    def __init__(self, *args, **kwargs) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    @staticmethod
+    def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
+        """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
+    def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
+        """generate(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
+    def getTarget(self) -> str:
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator) -> str"""
+    def getVersion(self) -> str:
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator) -> str"""
+
+class WgslShaderGenerator(GlslShaderGenerator):
+    def __init__(self, *args, **kwargs) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    @staticmethod
+    def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
+        """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
+    def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
+        """generate(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
+    def getTarget(self) -> str:
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator) -> str"""
+    def getVersion(self) -> str:
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator) -> str"""

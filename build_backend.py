@@ -3,7 +3,9 @@ import subprocess
 import sys
 
 # Run stubgen before any build (same command as in setup.sh)
-print("Producing stubs for MaterialX...")
+print("Producing stubs for MaterialX.")
+python_version = f"{sys.version_info.major}.{sys.version_info.minor}"
+print("Using Python version:", python_version)
 subprocess.check_call([
     "stubgen",
     "-p", "MaterialX",

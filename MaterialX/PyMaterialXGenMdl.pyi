@@ -7,4 +7,7 @@ class MdlShaderGenerator(MaterialX.PyMaterialXGenShader.ShaderGenerator):
     def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
         """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
     def getTarget(self) -> str:
-        """getTarget(self: MaterialX.PyMaterialXGenMdl.MdlShaderGenerator) -> str"""
+        """getTarget(self: MaterialX.PyMaterialXGenMdl.MdlShaderGenerator) -> str
+
+        Return a unique identifier for the target this generator is for.
+        """

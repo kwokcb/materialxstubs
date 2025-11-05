@@ -23,7 +23,7 @@ If you have a locally built MaterialX version (e.g., 1.39.5) that's not yet on P
 # First, ensure your local MaterialX is installed
 pip install /path/to/your/MaterialX
 
-# Then install materialxstubs without build isolation
+# Then install types-MaterialX without build isolation
 pip install --no-build-isolation .
 ```
 

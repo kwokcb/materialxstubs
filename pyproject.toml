@@ -9,7 +9,7 @@ build-backend = "build_backend"
 backend-path = ["."]
 
 [project]
-name = "materialxstubs"
+name = "types-MaterialX"
 version = "0.0.1"
 description = "PEP 561 type stubs for MaterialX"
 readme = "README.md"
@@ -19,7 +19,7 @@ maintainers = [
 requires-python = ">=3.8"
 dependencies = [
   "MaterialX>=1.39.4",
-  "pybind11-stubgen"
+  "mypy>=1.0"
 ]
 keywords = ["typing", "stubs", "PEP561", "MaterialX", "types"]
 classifiers = [
@@ -36,4 +36,6 @@ where = ["."]
 include = ["MaterialX*"]
 
 [tool.setuptools.package-data]
-MaterialX = ["**/*.pyi"]
+MaterialX = ["**/*.pyi", "py.typed"]
+
+

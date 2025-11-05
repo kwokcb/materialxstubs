@@ -5,7 +5,7 @@
 set -e  # Exit on error
 
 echo "=========================================="
-echo "Cleaning materialxstubs Build Artifacts"
+echo "Cleaning types-MaterialX Build Artifacts"
 echo "=========================================="
 echo ""
 
@@ -21,7 +21,7 @@ safe_remove() {
 
 echo "- Removing build artifacts..."
 safe_remove "build"
-safe_remove "materialxstubs.egg-info"
+safe_remove "types-MaterialX.egg-info"
 safe_remove ".mypy_cache"
 safe_remove "dist"
 safe_remove "__pycache__"
@@ -30,9 +30,9 @@ echo "- Removing stubs..."
 safe_remove "MaterialX"
 
 # Uninstall package
-echo "- Uninstalling materialxstubs package..."
-if pip show materialxstubs > /dev/null 2>&1; then
-    pip uninstall materialxstubs -y
+echo "- Uninstalling types-MaterialX package..."
+if pip show types-MaterialX > /dev/null 2>&1; then
+    pip uninstall types-MaterialX -y
     echo "✓ Package uninstalled"
 else
     echo "✓ Package not installed (skipping)"

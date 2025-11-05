@@ -1,3 +1,4 @@
 recursive-include MaterialX *.pyi
+include MaterialX py.typed
 include README.md
 include build_backend.py

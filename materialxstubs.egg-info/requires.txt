@@ -1,2 +1,0 @@
-MaterialX
-pybind11-stubgen

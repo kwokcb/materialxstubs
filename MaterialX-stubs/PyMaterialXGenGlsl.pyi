@@ -8,20 +8,11 @@ class EsslShaderGenerator(GlslShaderGenerator):
     def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
         """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
     def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
-        """generate(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader
-
-        Generate a shader starting from the given element, translating the element and all dependencies upstream into shader code.
-        """
+        """generate(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
     def getTarget(self) -> str:
-        """getTarget(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator) -> str
-
-        Return a unique identifier for the target this generator is for.
-        """
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator) -> str"""
     def getVersion(self) -> str:
-        """getVersion(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator) -> str
-
-        Return the version string for the ESSL version this generator is for.
-        """
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.EsslShaderGenerator) -> str"""
 
 class GlslResourceBindingContext(MaterialX.PyMaterialXGenShader.HwResourceBindingContext):
     def __init__(self, arg0: int, arg1: int) -> None:
@@ -41,20 +32,11 @@ class GlslShaderGenerator(MaterialX.PyMaterialXGenShader.HwShaderGenerator):
     def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
         """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
     def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
-        """generate(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader
-
-        Generate a shader starting from the given element, translating the element and all dependencies upstream into shader code.
-        """
+        """generate(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
     def getTarget(self) -> str:
-        """getTarget(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator) -> str
-
-        Return a unique identifier for the target this generator is for.
-        """
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator) -> str"""
     def getVersion(self) -> str:
-        """getVersion(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator) -> str
-
-        Return the version string for the ESSL version this generator is for.
-        """
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.GlslShaderGenerator) -> str"""
 
 class VkShaderGenerator(GlslShaderGenerator):
     def __init__(self, *args, **kwargs) -> None:
@@ -63,20 +45,11 @@ class VkShaderGenerator(GlslShaderGenerator):
     def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
         """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
     def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
-        """generate(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader
-
-        Generate a shader starting from the given element, translating the element and all dependencies upstream into shader code.
-        """
+        """generate(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
     def getTarget(self) -> str:
-        """getTarget(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator) -> str
-
-        Return a unique identifier for the target this generator is for.
-        """
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator) -> str"""
     def getVersion(self) -> str:
-        """getVersion(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator) -> str
-
-        Return the version string for the ESSL version this generator is for.
-        """
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.VkShaderGenerator) -> str"""
 
 class WgslShaderGenerator(GlslShaderGenerator):
     def __init__(self, *args, **kwargs) -> None:
@@ -85,17 +58,8 @@ class WgslShaderGenerator(GlslShaderGenerator):
     def create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator:
         """create() -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
     def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader:
-        """generate(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader
-
-        Generate a shader starting from the given element, translating the element and all dependencies upstream into shader code.
-        """
+        """generate(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
     def getTarget(self) -> str:
-        """getTarget(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator) -> str
-
-        Return a unique identifier for the target this generator is for.
-        """
+        """getTarget(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator) -> str"""
     def getVersion(self) -> str:
-        """getVersion(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator) -> str
-
-        Return the version string for the ESSL version this generator is for.
-        """
+        """getVersion(self: MaterialX.PyMaterialXGenGlsl.WgslShaderGenerator) -> str"""

@@ -3,10 +3,20 @@ import subprocess
 import sys
 from pathlib import Path
 
-# Run stubgen before any build (same command as in setup.sh)
+# Run stubgen before any build
 print("Producing stubs for MaterialX.")
 python_version = f"{sys.version_info.major}.{sys.version_info.minor}"
 print("Using Python version:", python_version)
+
+import shutil
+project_root = Path(__file__).parent
+target_dir = project_root / "MaterialX-stubs"
+
+# Remove existing MaterialX-stubs directory if it exists
+if target_dir.exists():
+    shutil.rmtree(target_dir)
+
+# Generate stubs - stubgen will create MaterialX/ directory
 subprocess.check_call([
     "stubgen",
     "-p", "MaterialX",
@@ -14,12 +24,17 @@ subprocess.check_call([
     "--include-docstrings",
     "-v"
 ])
-print("Stub generation completed.")
+
+# Rename MaterialX to MaterialX-stubs for PEP 561 compliance
+source_dir = project_root / "MaterialX"
+if source_dir.exists():
+    shutil.move(str(source_dir), str(target_dir))
+    print(f"Renamed MaterialX to MaterialX-stubs")
+
+print(f"Stubs generated in: {target_dir}")
 
 # Add PEP 561 marker
-project_root = Path(__file__).parent
-out_dir = project_root / "MaterialX"
-marker = out_dir / "py.typed"
+marker = target_dir / "py.typed"
 marker.touch(exist_ok=True)
 print(f"Created marker file: {marker}")
 

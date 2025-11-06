@@ -27,27 +27,18 @@ class ColorManagementSystem:
     def __init__(self) -> None:
         """__init__(self: MaterialX.PyMaterialXGenShader.ColorManagementSystem) -> None"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.ColorManagementSystem) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.ColorManagementSystem) -> str"""
     def loadLibrary(self, arg0: MaterialX.PyMaterialXCore.Document) -> None:
-        """loadLibrary(self: MaterialX.PyMaterialXGenShader.ColorManagementSystem, arg0: MaterialX.PyMaterialXCore.Document) -> None
-
-        Load a library of implementations from the provided document, replacing any previously loaded content.
-        """
+        """loadLibrary(self: MaterialX.PyMaterialXGenShader.ColorManagementSystem, arg0: MaterialX.PyMaterialXCore.Document) -> None"""
     def supportsTransform(self, arg0: ColorSpaceTransform) -> bool:
-        """supportsTransform(self: MaterialX.PyMaterialXGenShader.ColorManagementSystem, arg0: MaterialX.PyMaterialXGenShader.ColorSpaceTransform) -> bool
-
-        Returns whether this color management system supports a provided transform.
-        """
+        """supportsTransform(self: MaterialX.PyMaterialXGenShader.ColorManagementSystem, arg0: MaterialX.PyMaterialXGenShader.ColorSpaceTransform) -> bool"""
 
 class ColorSpaceTransform:
     sourceSpace: str
     targetSpace: str
     type: Incomplete
     def __init__(self, arg0: str, arg1: str, arg2) -> None:
-        """__init__(self: MaterialX.PyMaterialXGenShader.ColorSpaceTransform, arg0: str, arg1: str, arg2: MaterialX_v1_39_5::TypeDesc) -> None"""
+        """__init__(self: MaterialX.PyMaterialXGenShader.ColorSpaceTransform, arg0: str, arg1: str, arg2: MaterialX_v1_39_4::TypeDesc) -> None"""
 
 class DefaultColorManagementSystem(ColorManagementSystem):
     def __init__(self, *args, **kwargs) -> None:
@@ -56,39 +47,21 @@ class DefaultColorManagementSystem(ColorManagementSystem):
     def create(arg0: str) -> DefaultColorManagementSystem:
         """create(arg0: str) -> MaterialX.PyMaterialXGenShader.DefaultColorManagementSystem"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.DefaultColorManagementSystem) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.DefaultColorManagementSystem) -> str"""
 
 class GenContext:
     def __init__(self, arg0: ShaderGenerator) -> None:
         """__init__(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> None"""
     def getApplicationVariableHandler(self, *args, **kwargs):
-        """getApplicationVariableHandler(self: MaterialX.PyMaterialXGenShader.GenContext) -> Callable[[MaterialX_v1_39_5::ShaderNode, MaterialX.PyMaterialXGenShader.GenContext], None]
-
-        Get handler for application variables.
-        """
+        """getApplicationVariableHandler(self: MaterialX.PyMaterialXGenShader.GenContext) -> Callable[[MaterialX_v1_39_4::ShaderNode, MaterialX.PyMaterialXGenShader.GenContext], None]"""
     def getOptions(self, *args, **kwargs):
-        """getOptions(self: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX_v1_39_5::GenOptions
-
-        Return shader generation options.
-        """
+        """getOptions(self: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX_v1_39_4::GenOptions"""
     def getShaderGenerator(self) -> ShaderGenerator:
-        """getShaderGenerator(self: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.ShaderGenerator
-
-        Return shader generatior.
-        """
+        """getShaderGenerator(self: MaterialX.PyMaterialXGenShader.GenContext) -> MaterialX.PyMaterialXGenShader.ShaderGenerator"""
     def getTypeDesc(self, *args, **kwargs):
-        """getTypeDesc(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: str) -> MaterialX_v1_39_5::TypeDesc
-
-        Return a TypeDesc for the given type name.
-        """
+        """getTypeDesc(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: str) -> MaterialX_v1_39_4::TypeDesc"""
     def pushUserData(self, arg0: str, arg1) -> None:
-        """pushUserData(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: str, arg1: MaterialX_v1_39_5::GenUserData) -> None
-
-        Add user data to the context to make it available during shader generator.
-        """
+        """pushUserData(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: str, arg1: MaterialX_v1_39_4::GenUserData) -> None"""
     @overload
     def registerSourceCodeSearchPath(self, arg0: MaterialX.PyMaterialXFormat.FilePath) -> None:
         """registerSourceCodeSearchPath(*args, **kwargs)
@@ -96,11 +69,7 @@ class GenContext:
 
         1. registerSourceCodeSearchPath(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: MaterialX.PyMaterialXFormat.FilePath) -> None
 
-        Register a user search path for finding source code during code generation.
-
         2. registerSourceCodeSearchPath(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: MaterialX.PyMaterialXFormat.FileSearchPath) -> None
-
-        Register a user search path for finding source code during code generation.
         """
     @overload
     def registerSourceCodeSearchPath(self, arg0: MaterialX.PyMaterialXFormat.FileSearchPath) -> None:
@@ -109,22 +78,12 @@ class GenContext:
 
         1. registerSourceCodeSearchPath(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: MaterialX.PyMaterialXFormat.FilePath) -> None
 
-        Register a user search path for finding source code during code generation.
-
         2. registerSourceCodeSearchPath(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: MaterialX.PyMaterialXFormat.FileSearchPath) -> None
-
-        Register a user search path for finding source code during code generation.
         """
     def resolveSourceFile(self, arg0: MaterialX.PyMaterialXFormat.FilePath, arg1: MaterialX.PyMaterialXFormat.FilePath) -> MaterialX.PyMaterialXFormat.FilePath:
-        """resolveSourceFile(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: MaterialX.PyMaterialXFormat.FilePath, arg1: MaterialX.PyMaterialXFormat.FilePath) -> MaterialX.PyMaterialXFormat.FilePath
-
-        Resolve a source code filename, first checking the given local path then checking any file paths registered by the user.
-        """
+        """resolveSourceFile(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: MaterialX.PyMaterialXFormat.FilePath, arg1: MaterialX.PyMaterialXFormat.FilePath) -> MaterialX.PyMaterialXFormat.FilePath"""
     def setApplicationVariableHandler(self, arg0) -> None:
-        """setApplicationVariableHandler(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: Callable[[MaterialX_v1_39_5::ShaderNode, MaterialX.PyMaterialXGenShader.GenContext], None]) -> None
-
-        Set handler for application variables.
-        """
+        """setApplicationVariableHandler(self: MaterialX.PyMaterialXGenShader.GenContext, arg0: Callable[[MaterialX_v1_39_4::ShaderNode, MaterialX.PyMaterialXGenShader.GenContext], None]) -> None"""
 
 class GenOptions:
     addUpstreamDependencies: bool
@@ -152,10 +111,7 @@ class GenUserData:
     def __init__(self, *args, **kwargs) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def getSelf(self) -> GenUserData:
-        """getSelf(self: MaterialX.PyMaterialXGenShader.GenUserData) -> MaterialX.PyMaterialXGenShader.GenUserData
-
-        Return our self pointer.
-        """
+        """getSelf(self: MaterialX.PyMaterialXGenShader.GenUserData) -> MaterialX.PyMaterialXGenShader.GenUserData"""
 
 class HwResourceBindingContext(GenUserData):
     def __init__(self, *args, **kwargs) -> None:
@@ -176,6 +132,13 @@ class HwShaderGenerator(ShaderGenerator):
         """unbindLightShaders(self: MaterialX.PyMaterialXGenShader.GenContext) -> None"""
 
 class HwSpecularEnvironmentMethod:
+    """Members:
+
+      SPECULAR_ENVIRONMENT_PREFILTER
+
+      SPECULAR_ENVIRONMENT_FIS
+
+      SPECULAR_ENVIRONMENT_NONE"""
     __members__: ClassVar[dict] = ...  # read-only
     SPECULAR_ENVIRONMENT_FIS: ClassVar[HwSpecularEnvironmentMethod] = ...
     SPECULAR_ENVIRONMENT_NONE: ClassVar[HwSpecularEnvironmentMethod] = ...
@@ -194,57 +157,38 @@ class HwSpecularEnvironmentMethod:
     def __ne__(self, other: object) -> bool:
         """__ne__(self: object, other: object) -> bool"""
     @property
-    def name(self) -> str: ...
+    def name(self) -> str:
+        """name(self: object) -> str
+
+        name(self: object) -> str
+        """
     @property
-    def value(self) -> int: ...
+    def value(self) -> int:
+        """(arg0: MaterialX.PyMaterialXGenShader.HwSpecularEnvironmentMethod) -> int"""
 
 class Shader:
     def __init__(self, arg0: str, arg1) -> None:
-        """__init__(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str, arg1: MaterialX_v1_39_5::ShaderGraph) -> None"""
+        """__init__(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str, arg1: MaterialX_v1_39_4::ShaderGraph) -> None"""
     def getAttribute(self, arg0: str) -> MaterialX.PyMaterialXCore.Value:
-        """getAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> MaterialX.PyMaterialXCore.Value
-
-        Return the value string of the given attribute.
-
-        If the given attribute is not present, then an empty string is returned.
-        """
+        """getAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> MaterialX.PyMaterialXCore.Value"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.Shader) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.Shader) -> str"""
     def getSourceCode(self, arg0: str) -> str:
-        """getSourceCode(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> str
-
-        Return the shader source code for a given shader stage.
-        """
+        """getSourceCode(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> str"""
     def getStage(self, *args, **kwargs):
         """getStage(*args, **kwargs)
         Overloaded function.
 
-        1. getStage(self: MaterialX.PyMaterialXGenShader.Shader, arg0: int) -> MaterialX_v1_39_5::ShaderStage
+        1. getStage(self: MaterialX.PyMaterialXGenShader.Shader, arg0: int) -> MaterialX_v1_39_4::ShaderStage
 
-        Return a stage by name.
-
-        2. getStage(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> MaterialX_v1_39_5::ShaderStage
-
-        Return a stage by name.
+        2. getStage(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> MaterialX_v1_39_4::ShaderStage
         """
     def hasAttribute(self, arg0: str) -> bool:
-        """hasAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> bool
-
-        Return true if the given attribute is present.
-        """
+        """hasAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> bool"""
     def hasStage(self, arg0: str) -> bool:
-        """hasStage(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> bool
-
-        Return if stage exists.
-        """
+        """hasStage(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> bool"""
     def numStages(self) -> int:
-        """numStages(self: MaterialX.PyMaterialXGenShader.Shader) -> int
-
-        Return the number of shader stages for this shader.
-        """
+        """numStages(self: MaterialX.PyMaterialXGenShader.Shader) -> int"""
     @overload
     def setAttribute(self, arg0: str) -> None:
         """setAttribute(*args, **kwargs)
@@ -252,11 +196,7 @@ class Shader:
 
         1. setAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> None
 
-        Set the value string of the given attribute.
-
         2. setAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str, arg1: MaterialX.PyMaterialXCore.Value) -> None
-
-        Set the value string of the given attribute.
         """
     @overload
     def setAttribute(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Value) -> None:
@@ -265,63 +205,37 @@ class Shader:
 
         1. setAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str) -> None
 
-        Set the value string of the given attribute.
-
         2. setAttribute(self: MaterialX.PyMaterialXGenShader.Shader, arg0: str, arg1: MaterialX.PyMaterialXCore.Value) -> None
-
-        Set the value string of the given attribute.
         """
 
 class ShaderGenerator:
     def __init__(self, *args, **kwargs) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def generate(self, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2) -> Shader:
-        """generate(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX_v1_39_5::GenContext) -> MaterialX.PyMaterialXGenShader.Shader
-
-        Generate a shader starting from the given element, translating the element and all dependencies upstream into shader code.
-        """
+        """generate(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: str, arg1: MaterialX.PyMaterialXCore.Element, arg2: MaterialX_v1_39_4::GenContext) -> MaterialX.PyMaterialXGenShader.Shader"""
     def getColorManagementSystem(self) -> ColorManagementSystem:
-        """getColorManagementSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> MaterialX.PyMaterialXGenShader.ColorManagementSystem
-
-        Return the color management system string.
-        """
+        """getColorManagementSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> MaterialX.PyMaterialXGenShader.ColorManagementSystem"""
     def getTarget(self) -> str:
-        """getTarget(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> str
-
-        Return a unique identifier for the target this generator is for.
-        """
+        """getTarget(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> str"""
     def getTokenSubstitutions(self) -> dict[str, str]:
-        """getTokenSubstitutions(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> dict[str, str]
-
-        Return the map of token substitutions used by the generator.
-        """
+        """getTokenSubstitutions(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> dict[str, str]"""
     def getUnitSystem(self, *args, **kwargs):
-        """getUnitSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> MaterialX_v1_39_5::UnitSystem
-
-        Returns the unit system.
-        """
+        """getUnitSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator) -> MaterialX_v1_39_4::UnitSystem"""
     def registerShaderMetadata(self, arg0: MaterialX.PyMaterialXCore.Document, arg1) -> None:
-        """registerShaderMetadata(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX.PyMaterialXCore.Document, arg1: MaterialX_v1_39_5::GenContext) -> None
-
-        Register metadata that should be exported to the generated shaders.
-        """
+        """registerShaderMetadata(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX.PyMaterialXCore.Document, arg1: MaterialX_v1_39_4::GenContext) -> None"""
     def registerTypeDefs(self, arg0: MaterialX.PyMaterialXCore.Document) -> None:
-        """registerTypeDefs(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX.PyMaterialXCore.Document) -> None
-
-        Register type definitions from the document.
-        """
+        """registerTypeDefs(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX.PyMaterialXCore.Document) -> None"""
     def setColorManagementSystem(self, arg0: ColorManagementSystem) -> None:
-        """setColorManagementSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX.PyMaterialXGenShader.ColorManagementSystem) -> None
-
-        Set the color management system string.
-        """
+        """setColorManagementSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX.PyMaterialXGenShader.ColorManagementSystem) -> None"""
     def setUnitSystem(self, arg0) -> None:
-        """setUnitSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX_v1_39_5::UnitSystem) -> None
-
-        Sets the unit system.
-        """
+        """setUnitSystem(self: MaterialX.PyMaterialXGenShader.ShaderGenerator, arg0: MaterialX_v1_39_4::UnitSystem) -> None"""
 
 class ShaderInterfaceType:
+    """Members:
+
+      SHADER_INTERFACE_COMPLETE
+
+      SHADER_INTERFACE_REDUCED"""
     __members__: ClassVar[dict] = ...  # read-only
     SHADER_INTERFACE_COMPLETE: ClassVar[ShaderInterfaceType] = ...
     SHADER_INTERFACE_REDUCED: ClassVar[ShaderInterfaceType] = ...
@@ -339,125 +253,62 @@ class ShaderInterfaceType:
     def __ne__(self, other: object) -> bool:
         """__ne__(self: object, other: object) -> bool"""
     @property
-    def name(self) -> str: ...
+    def name(self) -> str:
+        """name(self: object) -> str
+
+        name(self: object) -> str
+        """
     @property
-    def value(self) -> int: ...
+    def value(self) -> int:
+        """(arg0: MaterialX.PyMaterialXGenShader.ShaderInterfaceType) -> int"""
 
 class ShaderPort:
     def __init__(self, *args, **kwargs) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def getColorSpace(self) -> str:
-        """getColorSpace(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the element's color space string.
-        """
+        """getColorSpace(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getFullName(self) -> str:
-        """getFullName(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the name of this port.
-        """
+        """getFullName(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getGeomProp(self) -> str:
-        """getGeomProp(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the GeomProp, if any, with the given name.
-        """
+        """getGeomProp(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getPath(self) -> str:
-        """getPath(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the path to this port.
-        """
+        """getPath(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getSemantic(self) -> str:
-        """getSemantic(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the variable semantic of this port.
-        """
+        """getSemantic(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getType(self, *args, **kwargs):
-        """getType(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> MaterialX_v1_39_5::TypeDesc
-
-        Get stream attribute name.
-        """
+        """getType(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> MaterialX_v1_39_4::TypeDesc"""
     def getUnit(self) -> str:
-        """getUnit(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the unit type for the value on this port.
-        """
+        """getUnit(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getValue(self) -> MaterialX.PyMaterialXCore.Value:
-        """getValue(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> MaterialX.PyMaterialXCore.Value
-
-        Returns a value formatted according to this type syntax.
-
-        The value is constructed from the given value object.
-        """
+        """getValue(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> MaterialX.PyMaterialXCore.Value"""
     def getValueString(self) -> str:
-        """getValueString(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return value string.
-        """
+        """getValueString(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def getVariable(self) -> str:
-        """getVariable(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str
-
-        Return the variable name of this port.
-        """
+        """getVariable(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> str"""
     def isEmitted(self) -> bool:
-        """isEmitted(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> bool
-
-        Return the emitted state of this port.
-        """
+        """isEmitted(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> bool"""
     def isUniform(self) -> bool:
-        """isUniform(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> bool
-
-        Return the uniform flag on this port.
-        """
+        """isUniform(self: MaterialX.PyMaterialXGenShader.ShaderPort) -> bool"""
     def setColorSpace(self, arg0: str) -> None:
-        """setColorSpace(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None
-
-        Set the element's color space string.
-        """
+        """setColorSpace(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None"""
     def setGeomProp(self, arg0: str) -> None:
-        """setGeomProp(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None
-
-        Set the geometric property string of this element.
-        """
+        """setGeomProp(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None"""
     def setName(self, arg0: str) -> None:
-        """setName(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None
-
-        Set the element's name string.
-        """
+        """setName(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None"""
     def setPath(self, arg0: str) -> None:
-        """setPath(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None
-
-        Set the path to this port.
-        """
+        """setPath(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None"""
     def setSemantic(self, arg0: str) -> None:
-        """setSemantic(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None
-
-        Set the variable semantic of this port.
-        """
+        """setSemantic(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None"""
     def setType(self, arg0) -> None:
-        """setType(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: MaterialX_v1_39_5::TypeDesc) -> None
-
-        Set the data type for this port.
-        """
+        """setType(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: MaterialX_v1_39_4::TypeDesc) -> None"""
     def setUnit(self, arg0: str) -> None:
-        """setUnit(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None
-
-        Set a unit type for the value on this port.
-        """
-    def setValue(self, arg0: MaterialX.PyMaterialXCore.Value, arg1: bool) -> None:
-        """setValue(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: MaterialX.PyMaterialXCore.Value, arg1: bool) -> None
-
-        Set the typed value of an element from a C-style string.
-        """
+        """setUnit(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None"""
+    def setValue(self, arg0: MaterialX.PyMaterialXCore.Value) -> None:
+        """setValue(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: MaterialX.PyMaterialXCore.Value) -> None"""
     def setVariable(self, arg0: str) -> None:
-        """setVariable(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None
-
-        Set the variable name of this port.
-        """
+        """setVariable(self: MaterialX.PyMaterialXGenShader.ShaderPort, arg0: str) -> None"""
 
 class ShaderPortPredicate:
     def __init__(self, *args, **kwargs) -> None:
@@ -465,67 +316,31 @@ class ShaderPortPredicate:
 
 class ShaderStage:
     def __init__(self, arg0: str, arg1) -> None:
-        """__init__(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str, arg1: MaterialX_v1_39_5::Syntax) -> None"""
+        """__init__(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str, arg1: MaterialX_v1_39_4::Syntax) -> None"""
     def getConstantBlock(self) -> VariableBlock:
-        """getConstantBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> MaterialX.PyMaterialXGenShader.VariableBlock
-
-        Return the constant variable block.
-        """
+        """getConstantBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> MaterialX.PyMaterialXGenShader.VariableBlock"""
     def getFunctionName(self) -> str:
-        """getFunctionName(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> str
-
-        Return the stage function name.
-        """
+        """getFunctionName(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> str"""
     def getIncludes(self) -> set[str]:
-        """getIncludes(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> set[str]
-
-        Return a set of all include files.
-        """
+        """getIncludes(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> set[str]"""
     def getInputBlock(self, arg0: str) -> VariableBlock:
-        """getInputBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str) -> MaterialX.PyMaterialXGenShader.VariableBlock
-
-        Return the input variable block with given name.
-        """
+        """getInputBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str) -> MaterialX.PyMaterialXGenShader.VariableBlock"""
     def getInputBlocks(self) -> dict[str, VariableBlock]:
-        """getInputBlocks(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> dict[str, MaterialX.PyMaterialXGenShader.VariableBlock]
-
-        Return a map of all input blocks.
-        """
+        """getInputBlocks(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> dict[str, MaterialX.PyMaterialXGenShader.VariableBlock]"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> str"""
     def getOutputBlock(self, arg0: str) -> VariableBlock:
-        """getOutputBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str) -> MaterialX.PyMaterialXGenShader.VariableBlock
-
-        Return the output variable block with given name.
-        """
+        """getOutputBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str) -> MaterialX.PyMaterialXGenShader.VariableBlock"""
     def getOutputBlocks(self) -> dict[str, VariableBlock]:
-        """getOutputBlocks(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> dict[str, MaterialX.PyMaterialXGenShader.VariableBlock]
-
-        Return a map of all output blocks.
-        """
+        """getOutputBlocks(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> dict[str, MaterialX.PyMaterialXGenShader.VariableBlock]"""
     def getSourceCode(self) -> str:
-        """getSourceCode(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> str
-
-        Return the shader source code for a given shader stage.
-        """
+        """getSourceCode(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> str"""
     def getSourceDependencies(self) -> set[str]:
-        """getSourceDependencies(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> set[str]
-
-        Return a set of all source dependencies.
-        """
+        """getSourceDependencies(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> set[str]"""
     def getUniformBlock(self, arg0: str) -> VariableBlock:
-        """getUniformBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str) -> MaterialX.PyMaterialXGenShader.VariableBlock
-
-        Return the uniform variable block with given name.
-        """
+        """getUniformBlock(self: MaterialX.PyMaterialXGenShader.ShaderStage, arg0: str) -> MaterialX.PyMaterialXGenShader.VariableBlock"""
     def getUniformBlocks(self) -> dict[str, VariableBlock]:
-        """getUniformBlocks(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> dict[str, MaterialX.PyMaterialXGenShader.VariableBlock]
-
-        Return a map of all uniform blocks.
-        """
+        """getUniformBlocks(self: MaterialX.PyMaterialXGenShader.ShaderStage) -> dict[str, MaterialX.PyMaterialXGenShader.VariableBlock]"""
 
 class ShaderTranslator:
     def __init__(self, *args, **kwargs) -> None:
@@ -534,74 +349,35 @@ class ShaderTranslator:
     def create() -> ShaderTranslator:
         """create() -> MaterialX.PyMaterialXGenShader.ShaderTranslator"""
     def translateAllMaterials(self, arg0: MaterialX.PyMaterialXCore.Document, arg1: str) -> None:
-        """translateAllMaterials(self: MaterialX.PyMaterialXGenShader.ShaderTranslator, arg0: MaterialX.PyMaterialXCore.Document, arg1: str) -> None
-
-        Translate each material in the input document to the destination shading model.
-        """
+        """translateAllMaterials(self: MaterialX.PyMaterialXGenShader.ShaderTranslator, arg0: MaterialX.PyMaterialXCore.Document, arg1: str) -> None"""
     def translateShader(self, arg0: MaterialX.PyMaterialXCore.Node, arg1: str) -> None:
-        """translateShader(self: MaterialX.PyMaterialXGenShader.ShaderTranslator, arg0: MaterialX.PyMaterialXCore.Node, arg1: str) -> None
-
-        Translate a shader node to the destination shading model.
-        """
+        """translateShader(self: MaterialX.PyMaterialXGenShader.ShaderTranslator, arg0: MaterialX.PyMaterialXCore.Node, arg1: str) -> None"""
 
 class TypeDesc:
     def __init__(self, *args, **kwargs) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def getBaseType(self) -> int:
-        """getBaseType(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> int
-
-        Return the base type of the image.
-        """
+        """getBaseType(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> int"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> str"""
     def getSemantic(self) -> int:
-        """getSemantic(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> int
-
-        Return the variable semantic of this port.
-        """
+        """getSemantic(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> int"""
     def getSize(self) -> int:
-        """getSize(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> int
-
-        Get the number of elements.
-        """
+        """getSize(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> int"""
     def isAggregate(self) -> bool:
-        """isAggregate(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool
-
-        Return true if the type is an aggregate type.
-        """
+        """isAggregate(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool"""
     def isArray(self) -> bool:
-        """isArray(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool
-
-        Return true if the type is an array type.
-        """
+        """isArray(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool"""
     def isClosure(self) -> bool:
-        """isClosure(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool
-
-        Return true if the type represents a closure.
-        """
+        """isClosure(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool"""
     def isFloat2(self) -> bool:
-        """isFloat2(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool
-
-        Return true if the type is an aggregate of 2 floats.
-        """
+        """isFloat2(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool"""
     def isFloat3(self) -> bool:
-        """isFloat3(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool
-
-        Return true if the type is an aggregate of 3 floats.
-        """
+        """isFloat3(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool"""
     def isFloat4(self) -> bool:
-        """isFloat4(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool
-
-        Return true if the type is an aggregate of 4 floats.
-        """
+        """isFloat4(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool"""
     def isScalar(self) -> bool:
-        """isScalar(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool
-
-        Return true if the type is a scalar type.
-        """
+        """isScalar(self: MaterialX.PyMaterialXGenShader.TypeDesc) -> bool"""
 
 class UnitSystem:
     def __init__(self, *args, **kwargs) -> None:
@@ -610,30 +386,15 @@ class UnitSystem:
     def create(arg0: str) -> UnitSystem:
         """create(arg0: str) -> MaterialX.PyMaterialXGenShader.UnitSystem"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.UnitSystem) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.UnitSystem) -> str"""
     def getUnitConverterRegistry(self) -> MaterialX.PyMaterialXCore.UnitConverterRegistry:
-        """getUnitConverterRegistry(self: MaterialX.PyMaterialXGenShader.UnitSystem) -> MaterialX.PyMaterialXCore.UnitConverterRegistry
-
-        Returns the currently assigned unit converter registry.
-        """
+        """getUnitConverterRegistry(self: MaterialX.PyMaterialXGenShader.UnitSystem) -> MaterialX.PyMaterialXCore.UnitConverterRegistry"""
     def loadLibrary(self, arg0: MaterialX.PyMaterialXCore.Document) -> None:
-        """loadLibrary(self: MaterialX.PyMaterialXGenShader.UnitSystem, arg0: MaterialX.PyMaterialXCore.Document) -> None
-
-        Load a library of implementations from the provided document, replacing any previously loaded content.
-        """
+        """loadLibrary(self: MaterialX.PyMaterialXGenShader.UnitSystem, arg0: MaterialX.PyMaterialXCore.Document) -> None"""
     def setUnitConverterRegistry(self, arg0: MaterialX.PyMaterialXCore.UnitConverterRegistry) -> None:
-        """setUnitConverterRegistry(self: MaterialX.PyMaterialXGenShader.UnitSystem, arg0: MaterialX.PyMaterialXCore.UnitConverterRegistry) -> None
-
-        Assign unit converter registry replacing any previous assignment.
-        """
+        """setUnitConverterRegistry(self: MaterialX.PyMaterialXGenShader.UnitSystem, arg0: MaterialX.PyMaterialXCore.UnitConverterRegistry) -> None"""
     def supportsTransform(self, arg0: UnitTransform) -> bool:
-        """supportsTransform(self: MaterialX.PyMaterialXGenShader.UnitSystem, arg0: MaterialX.PyMaterialXGenShader.UnitTransform) -> bool
-
-        Returns whether this color management system supports a provided transform.
-        """
+        """supportsTransform(self: MaterialX.PyMaterialXGenShader.UnitSystem, arg0: MaterialX.PyMaterialXGenShader.UnitTransform) -> bool"""
 
 class UnitTransform:
     sourceUnit: str
@@ -647,10 +408,7 @@ class VariableBlock:
     def __init__(self, arg0: str, arg1: str) -> None:
         """__init__(self: MaterialX.PyMaterialXGenShader.VariableBlock, arg0: str, arg1: str) -> None"""
     def empty(self) -> bool:
-        """empty(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> bool
-
-        Return true if the block has no variables.
-        """
+        """empty(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> bool"""
     @overload
     def find(self, arg0: str) -> ShaderPort:
         """find(*args, **kwargs)
@@ -658,15 +416,7 @@ class VariableBlock:
 
         1. find(self: MaterialX.PyMaterialXGenShader.VariableBlock, arg0: str) -> MaterialX.PyMaterialXGenShader.ShaderPort
 
-        Given an input filename, iterate through each path in this sequence, returning the first combined path found on the file system.
-
-        On success, the combined path is returned; otherwise the original filename is returned unmodified.
-
         2. find(self: MaterialX.PyMaterialXGenShader.VariableBlock, arg0: Callable[[MaterialX.PyMaterialXGenShader.ShaderPort], bool]) -> MaterialX.PyMaterialXGenShader.ShaderPort
-
-        Given an input filename, iterate through each path in this sequence, returning the first combined path found on the file system.
-
-        On success, the combined path is returned; otherwise the original filename is returned unmodified.
         """
     @overload
     def find(self, arg0: Callable[[ShaderPort], bool]) -> ShaderPort:
@@ -675,43 +425,20 @@ class VariableBlock:
 
         1. find(self: MaterialX.PyMaterialXGenShader.VariableBlock, arg0: str) -> MaterialX.PyMaterialXGenShader.ShaderPort
 
-        Given an input filename, iterate through each path in this sequence, returning the first combined path found on the file system.
-
-        On success, the combined path is returned; otherwise the original filename is returned unmodified.
-
         2. find(self: MaterialX.PyMaterialXGenShader.VariableBlock, arg0: Callable[[MaterialX.PyMaterialXGenShader.ShaderPort], bool]) -> MaterialX.PyMaterialXGenShader.ShaderPort
-
-        Given an input filename, iterate through each path in this sequence, returning the first combined path found on the file system.
-
-        On success, the combined path is returned; otherwise the original filename is returned unmodified.
         """
     def getInstance(self) -> str:
-        """getInstance(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> str
-
-        Get the instance name of this block.
-        """
+        """getInstance(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> str"""
     def getName(self) -> str:
-        """getName(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> str
-
-        Return the ColorManagementSystem name.
-        """
+        """getName(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> str"""
     def size(self) -> int:
-        """size(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> int
-
-        Return the number of strings in the path.
-        """
+        """size(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> int"""
     def __getitem__(self, arg0: int) -> ShaderPort:
-        """__getitem__(self: MaterialX.PyMaterialXGenShader.VariableBlock, arg0: int) -> MaterialX.PyMaterialXGenShader.ShaderPort
-
-        Return the number of strings in the path.
-        """
+        """__getitem__(self: MaterialX.PyMaterialXGenShader.VariableBlock, arg0: int) -> MaterialX.PyMaterialXGenShader.ShaderPort"""
     def __iter__(self) -> typing.Iterator[ShaderPort]:
         """def __iter__(self) -> typing.Iterator[ShaderPort]"""
     def __len__(self) -> int:
-        """__len__(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> int
-
-        Return the number of strings in the path.
-        """
+        """__len__(self: MaterialX.PyMaterialXGenShader.VariableBlock) -> int"""
 
 def connectsToWorldSpaceNode(arg0: MaterialX.PyMaterialXCore.Output) -> MaterialX.PyMaterialXCore.Node:
     """connectsToWorldSpaceNode(arg0: MaterialX.PyMaterialXCore.Output) -> MaterialX.PyMaterialXCore.Node"""

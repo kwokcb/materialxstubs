@@ -1,9 +1,18 @@
 # MaterialX Type Stub Generator
 
-Logic to create PEP 561 type stubs for [MaterialX](https://materialx.org/) 
+Logic to create PEP 561 compliant type stubs for [MaterialX](https://materialx.org/) 
 - Enables IntelliSense, autocomplete, and type checking for MaterialX in Python IDEs.
 - The sample stubs are based on head of version `1.39.5`. 
 - The repo can be cloned to create stubs for the desired MaterialX install.
+- Stubs are generated as `MaterialX-stubs/` package to provide types for your installed MaterialX package (PEP 561 compliant).
+
+## How It Works
+
+This package follows [PEP 561](https://peps.python.org/pep-0561/) for distributing type information:
+- The package is named `types-MaterialX` (standard naming for stub-only packages)
+- Stubs are installed in `MaterialX-stubs/` directory
+- When you import `MaterialX` in your code, type checkers (mypy, Pylance, etc.) automatically discover and use the stubs from `MaterialX-stubs/`
+- This works alongside your regular MaterialX installation without conflicts
 
 ## Installation
 

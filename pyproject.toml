@@ -33,9 +33,9 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["MaterialX*"]
+include = ["MaterialX-stubs*"]
 
 [tool.setuptools.package-data]
-MaterialX = ["**/*.pyi", "py.typed"]
+"*" = ["**/*.pyi", "py.typed"]
 
 

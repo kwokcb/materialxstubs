@@ -28,6 +28,8 @@ safe_remove "__pycache__"
 
 echo "- Removing stubs..."
 safe_remove "MaterialX"
+safe_remove "MaterialX-stubs"
+safe_remove "temp_stubs"
 
 # Uninstall package
 echo "- Uninstalling types-MaterialX package..."

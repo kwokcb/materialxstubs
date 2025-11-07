@@ -1,3 +1,6 @@
 /build
 /__pycache__
 /types_MaterialX.egg-info
+/dist
+/.idea
+/.vscode

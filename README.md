@@ -81,3 +81,15 @@ This will remove all build artifacts including generated stubs:
 ```bash
 cleanup.sh  # Clean build and stubs
 ```
+
+### Build distrubtion
+
+```bash
+./build_dist.sh
+```
+
+If `build` and / or `twine` are not found, install using
+
+```bash
+pip install ".[dev]"
+```

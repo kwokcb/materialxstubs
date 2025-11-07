@@ -60,7 +60,7 @@ def test_stub_discovery():
             break
     
     if not stubs_found:
-        print("   ✗ MaterialX-stubs NOT FOUND in site-packages")
+        print("   - MaterialX-stubs NOT FOUND in site-packages")
         return False
     
     # Show sample stub signatures

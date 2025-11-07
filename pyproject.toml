@@ -1,22 +1,26 @@
 [build-system]
 requires = [
-  "setuptools>=61",
+  "setuptools>=77",
   "wheel",
   "mypy>=1.0",
   "MaterialX>=1.39.4"
 ]
 build-backend = "build_backend"
-backend-path = ["."]
+backend-path = [ "." ]
 
 [project]
 name = "types-MaterialX"
 version = "0.0.1"
 description = "PEP 561 type stubs for MaterialX"
 readme = "README.md"
+authors = [
+  { name = "Bernard Kwok", email = "kwokcb@gmail.com" }
+]
 maintainers = [
   { name = "Bernard Kwok", email = "kwokcb@gmail.com" }
 ]
 requires-python = ">=3.8"
+license = "Apache-2.0"
 dependencies = [
   "MaterialX>=1.39.4",
   "mypy>=1.0"
@@ -27,6 +31,14 @@ classifiers = [
   "Typing :: Stubs Only",
   "Topic :: Software Development :: Libraries",
 ]
+
+[project.urls]
+Homepage = "https://github.com/kwokcb/types-MaterialX"
+Repository = "https://github.com/kwokcb/types-MaterialX"
+Issues = "https://github.com/kwokcb/types-MaterialX/issues"
+
+[project.optional-dependencies]
+dev = ["build>=1.2.0", "twine>=5.0.0"]
 
 [tool.setuptools]
 include-package-data = true
